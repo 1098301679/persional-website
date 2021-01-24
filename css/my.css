@@ -8,25 +8,33 @@
   /* background-color: #fff; */
 }
 
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 #blog-content .banner-bg {
 
   top: 20px;
   left: -15px;
   width: 200px;
-  height: 200px;
+  height: 654px;
   position: absolute;
-
-  background: url("../images/tengman/1.png") no-repeat;
+  opacity: .7;
+  background: url("../images/tengman/tm3.png") no-repeat;
   background-size: cover;
 
 
-  transform-origin: left center;
+  /* transform-origin: left center;
   animation-fill-mode: both;
   animation-name: move2;
   animation-timing-function: ease-out;
   animation-duration: 5s;
   animation-delay: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 
 #write {

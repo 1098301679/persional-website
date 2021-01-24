@@ -184,10 +184,10 @@ new Vue({
     hidden() {
       let item = document.querySelector('#bg-reverse')
       if(item.getAttribute("status") === 'close') {
-        item.style.display='block'
+        $('#bg-reverse').fadeIn('slow');
         item.setAttribute('status','open')
       } else {
-        item.style.display='none'
+        $('#bg-reverse').fadeOut('slow');
         item.setAttribute('status','close')
       }
 

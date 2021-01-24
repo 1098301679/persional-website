@@ -1401,13 +1401,12 @@ li {
 .banner-icon-1,
 .banner-icon-2,
 .banner-icon-3 {
+	cursor: pointer;
 	height: 102px;
 	width: 102px;
 	border-radius: 50px;
 	background: #ffffff;
 	text-align: center;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
@@ -2611,7 +2610,7 @@ li {
 .blog-one {
 	position: relative;
 	display: block;
-	padding: 108px 0 120px;
+	padding: 108px 0 230px;
 	background: #f3f7fc;
 }
 
