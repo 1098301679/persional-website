@@ -30,8 +30,7 @@ new Vue({
 
       axios.get('http://noox.top:8000/findBlogsByKind/' + sessionStorage.getItem('blogKindName')).then(function (response) {
 
-        that.blogs = response.data.blogs
-        console.log(response.data.blogs);
+        that.blogs = response.data
       })
     },
     showBlogDetail(blogName,url) {

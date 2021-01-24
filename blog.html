@@ -24,7 +24,7 @@
 
    <link rel="stylesheet" href="css/my.css">
    <link rel="stylesheet" href="css/a.css">
-   <link rel="shortcut icon" href="assets/images/favicon.ico" >
+   <link rel="shortcut icon" href="assets/images/favicon.ico">
 
 
 </head>
@@ -38,7 +38,8 @@
          <button class="toolbar-gotop" title="返回顶部" data-tips="返回顶部" @click="go_top">
             <i class="fa fa-chevron-up" aria-hidden="true"></i>
          </button>
-         <button class="toolbar-contents" title="改变代码背景" status="close" data-tips="阅读目录" @click="change_code_background()">
+         <button class="toolbar-contents" title="改变代码背景" status="close" data-tips="阅读目录"
+            @click="change_code_background()">
             <i class="fa fa-list-ul" aria-hidden="true"></i>
          </button>
          <button class="toolbar-follow" title="隐藏工具栏" data-tips="关注博主" status="close" @click="hidden()">
@@ -75,7 +76,7 @@
                </div>
                <div class="hedder-logo">
                   <h1><a href="index.html">
-                        <img src="images/tengman/6.png" class="img-fluid" alt="Responsive image">DH</a>
+                        <img src="images/tengman/6.png" class="img-fluid" alt="Responsive image"><span style="margin-left: 10px;">DI</span></a>
                   </h1>
                </div>
                <!-- /open/close -->
@@ -89,16 +90,17 @@
 
 
       <div class="inner_page-banner">
+
          <div class="blog-title">{{ blogName }}
          </div>
-         <div class="article-info">
-            <span class="postMeta">
-               <i class="fa fa-clock"> 发表于2019-12-01 13:11 </i>
-               <i class="fa fa-eye"> 阅读：23619 </i>
-               <i class="fa fa-comment"> 评论：5 </i>
-               <i class="fa fa-fire"> 推荐：4 </i>
-            </span>
+
+         <div class="postMeta">
+            <i class="fa fa-clock"> 发表于2019-12-01 13:11 </i>
+            <i class="fa fa-eye"> 阅读：23619 </i>
+            <i class="fa fa-comment"> 评论：5 </i>
+            <i class="fa fa-fire"> 推荐：4 </i>
          </div>
+
       </div>
       <!--//banner -->
 
@@ -350,10 +352,23 @@
       });
 
 
+
+
+      document.querySelector('.inner_page-banner').style.height = window.innerHeight + 'px';
+
+      $(window).resize(function () {
+         $('.inner_page-banenr').css('height', window.innerHeight + 'px');
+      })
+
+
+
+
+      
       let blog_content = document.getElementById('blog-content');
       let bg_reverse = document.getElementById('bg-reverse');
 
-      window.onload = function (params) {
+
+      window.addEventListener('load',function (params) {
          document.addEventListener('scroll', function (params) {
             if (window.pageYOffset > blog_content.offsetTop) {
                bg_reverse.style.position = 'fixed';
@@ -363,11 +378,12 @@
                bg_reverse.style.position = 'absolute';
                console.log("11:" + bg_reverse.offsetTop);
                bg_reverse.style.top = 0 + 'px';
-
                bg_reverse.style.right = 6 + '%';
             }
          })
-      }
+      })
+
+    
    </script>
 
    <script src="js/classie.js"></script>
@@ -377,11 +393,9 @@
 
 
 
-
-
-
-
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.3.5/pixi.min.js"></script>
+   <script src="js/blog_bg.js"></script>
 
 
 
